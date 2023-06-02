@@ -1,17 +1,21 @@
-* {
-    border: 2px solid red;
-}
-
-.play-area {
-    position: fixed;
-    height: fit-content;
-    width: 100%;
-    left: 0;
-    bottom: 0;
+html {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.play-area {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 .play-area > * {
-    position: relative;  
+    position: absolute;  
 }
