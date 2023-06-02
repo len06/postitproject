@@ -1,18 +1,22 @@
 import './App.css';
 import NavBar from './components(NavBar)';
+import { Nav } from './components(NavBar)/NavBarElements';
 import  Home from './pages';
 import Settings from './pages/settings';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Outlet } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <Router>
-        <NavBar />
+    <BrowserRouter>
+        <NavBar/>
         <Routes>
-            <Route path='/' exact component={Home} />
-            <Route path='./settings' component={Settings} />
+            <Route path='/' exact element={<Home/>}>
+              <Route path='settings' element={<Settings/>} />
+            </Route>
         </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
